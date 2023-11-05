@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.6)  25 OCT 2023 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.6)  26 OCT 2023 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1192,30 +1192,27 @@ File: TS1UniversalisADFStd-LF.fd 2014/05/01 (autoinst) Font definitions for TS1
 )
 LaTeX Font Info:    Font shape `TS1/UniversalisADFStd-LF/c/n' will be
 (Font)              scaled to size 10.0pt on input line 12.
- (table.tex) [1
+ (table.tex
+! Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.33 \bottomrule
+                
+? 
+! Emergency stop.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.33 \bottomrule
+                
+End of file on the terminal!
 
-{C:/Users/Leon/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (kitchen_duty
-_roster.aux)
-Package rerunfilecheck Info: File `kitchen_duty_roster.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 26060 strings out of 475385
- 488179 string characters out of 2777379
- 806252 words of memory out of 3000000
- 46935 multiletter control sequences out of 15000+600000
- 500842 words of font info for 97 fonts, out of 8000000 for 9000
+ 26046 strings out of 475385
+ 487768 string characters out of 2777379
+ 795252 words of memory out of 3000000
+ 46934 multiletter control sequences out of 15000+600000
+ 499198 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,11n,106p,477b,477s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/universalis/unvs
-l_fe7xck.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/unive
-rsalis/unvsl_sjpjw4.enc}<C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type
-1/arkandis/universalis/UniversalisADFStd-BoldCond.pfb><C:/Users/Leon/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/arkandis/universalis/UniversalisADFStd-Cond.pfb
->
-Output written on kitchen_duty_roster.pdf (1 page, 31836 bytes).
-PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 104i,11n,106p,477b,336s stack positions out of 10000i,1000n,20000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
