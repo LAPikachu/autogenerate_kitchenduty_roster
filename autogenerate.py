@@ -5,7 +5,7 @@ import datetime
 
 def find_monday_date(init_day=datetime.date.today()):
     #let's find next mondays date; weekday returns 0 for Mon, 1 for Tue, ... etc. 
-    start_day = start_day + datetime.timedelta(days=(7 - start_day.weekday())) 
+    start_day = init_day + datetime.timedelta(days=(7 - init_day.weekday())) 
     return start_day  
 
 def make_table(monday_first_week_date = find_monday_date(),
@@ -25,11 +25,19 @@ def make_table(monday_first_week_date = find_monday_date(),
             sunday = sunday + datetime.timedelta(days=7)
         f.write('\n\\end{tabular}\n\\end{table}\n')
 
+def compile_roster(lang='en'):
+    if lang == 'en':
+        os.system('pdflatex kitchen_duty_roster.tex')
+    elif lang == 'de':
+        os.system('pdflatex Küchendienstplan.tex')
+    else: 
+        raise  ValueError('Language not supported')
+
+
 def main():
     find_monday_date()
     make_table()
-    os.system('pdflatex kitchen_duty_roster.tex')
-    os.system('pdflatex Küchendienstplan.tex')
+    compile_roster()
 if __name__=='__main__':
     main()
 
