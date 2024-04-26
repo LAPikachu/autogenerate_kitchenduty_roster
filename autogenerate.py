@@ -3,8 +3,7 @@
 import os
 import datetime
 
-def find_monday_date(start_day=datetime.date.today()):
-    start_day = datetime.date.today()
+def find_monday_date(init_day=datetime.date.today()):
     #let's find next mondays date; weekday returns 0 for Mon, 1 for Tue, ... etc. 
     start_day = start_day + datetime.timedelta(days=(7 - start_day.weekday())) 
     return start_day  
