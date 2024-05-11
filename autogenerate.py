@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 import os
+import shutil
 import datetime
 
 def find_monday_date(init_day=datetime.date.today()):
@@ -25,17 +26,30 @@ def make_table(monday_first_week_date = find_monday_date(),
             sunday = sunday + datetime.timedelta(days=7)
         f.write('\n\\end{tabular}\n\\end{table}\n')
 
+def clean_up():
+    os.chdir('..')
+    if os.path.exists('table.tex'):
+        os.remove('table.tex')
+    if os.path.exists('kitchen_duty_roster.aux'):
+        os.remove('kitchen_duty_roster.aux')
+    if os.path.exists('kitchen_duty_roster.log'):
+        os.remove('kitchen_duty_roster.log')
+    if os.path.exists('kitchen_duty_roster.out'):
+        os.remove('kitchen_duty_roster.out')
+    if os.path.exists('texput.log'):
+        os.remove('texput.log')
+
 def compile_roster(lang='en'):
-    os.system('cd latex_src')
-    os.system('ls')
+    os.chdir('latex_src')
     if lang == 'en':
         os.system('pdflatex kitchen_duty_roster.tex')
-        os.system('cp kitchen_duty_roster.pdf ../.')
+        shutil.copy('kitchen_duty_roster.pdf', '../.')
     elif lang == 'de':
         os.system('pdflatex Küchendienstplan.tex')
-        os.system('cp Küchendienstplan.pdf ../.')
+        shutil.copy('Küchendienstplan.pdf', '../.')
     else: 
         raise  ValueError('Language not supported')
+    clean_up()
 
 
 def main():
