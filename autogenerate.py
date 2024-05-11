@@ -26,10 +26,14 @@ def make_table(monday_first_week_date = find_monday_date(),
         f.write('\n\\end{tabular}\n\\end{table}\n')
 
 def compile_roster(lang='en'):
+    os.system('cd latex_src')
+    os.system('ls')
     if lang == 'en':
         os.system('pdflatex kitchen_duty_roster.tex')
+        os.system('cp kitchen_duty_roster.pdf ../.')
     elif lang == 'de':
         os.system('pdflatex Küchendienstplan.tex')
+        os.system('cp Küchendienstplan.pdf ../.')
     else: 
         raise  ValueError('Language not supported')
 
