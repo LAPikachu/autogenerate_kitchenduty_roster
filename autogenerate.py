@@ -25,7 +25,7 @@ def make_table(monday_first_week_date = find_monday_date(),
             sunday = sunday + datetime.timedelta(days=7)
         f.write('\n\\end{tabular}\n\\end{table}\n')
 
-def compile_roster(lang='en'):
+def compile_roster(lang='de'):
     if lang == 'en':
         os.system('pdflatex kitchen_duty_roster.tex')
     elif lang == 'de':
